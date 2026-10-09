@@ -73,15 +73,30 @@
 
         <section>
         <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
+            <h2>Section 3: A basic chart</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
                 As a first example, we're using a basic chart from our repo.
             </p>
         </div>
 
-        <!-- This element will contain our vega-lite chart -->
-        <figure id="chart2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+            {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/nadiawhlam/nadiawhlam.github.io/refs/heads/main/UK%20CPI%20INDEX%20Chocolate.csv"},
+
+    "title": {"text": "UK Chocolate"},
+
+    "width":300,
+    "height":300,
+
+    "mark":{"type": "bar","color":"brown"},
+ 
+    "encoding": {
+      "x": {"field": "date","type": "temporal"},
+      "y": {"field": "value","type": "quantitative"}
+    }
+}
 
     </section>
 
@@ -104,6 +119,12 @@
         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
 
         vegaEmbed('#chart2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+
+        let figure_2_spec = "UK chocolate"; // We're storing the URL of the graph we want to display in a variable
+        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+
+        vegaEmbed('#chart3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_2_spec, adding VegaEmbed for Location2, and adding a new section in the HTML
