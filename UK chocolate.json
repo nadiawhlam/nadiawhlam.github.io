@@ -1,4 +1,4 @@
-let figure_3_spec = {
+{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/nadiawhlam/nadiawhlam.github.io/refs/heads/main/UK%20CPI%20INDEX%20Chocolate.csv"
@@ -11,4 +11,4 @@ let figure_3_spec = {
     "x": {"field": "date", "type": "temporal"},
     "y": {"field": "value", "type": "quantitative"}
   }
-};
+}
