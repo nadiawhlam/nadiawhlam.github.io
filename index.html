@@ -122,21 +122,8 @@
         vegaEmbed('#chart2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
         let figure_3_spec = "UK chocolate.json"
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/nadiawhlam/nadiawhlam.github.io/refs/heads/main/UK%20CPI%20INDEX%20Chocolate.csv"
-  },
-  "title": {"text": "UK Chocolate"},
-  "width": 300,
-  "height": 300,
-  "mark": {"type": "bar", "color": "brown"},
-  "encoding": {
-    "x": {"field": "date", "type": "temporal"},
-    "y": {"field": "value", "type": "quantitative"}
-  }
-};
-
-vegaEmbed('#chart3', figure_3_spec);
+            
+        vegaEmbed('#chart3', figure_3_spec);
 
 
         // Do you want to add more graphs?
