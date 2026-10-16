@@ -68,14 +68,24 @@
         <!-- This element will contain our vega-lite chart -->
         <figure id="chart1"></figure>
         <figure id="chart2"></figure>
-    </section>                                      
+    </section>  
+
+    <section>
+        <div class="chart-description">
+            <h2>#02. Building. Create your own visualisations</h2>
+            <p> Two charts I created using the ECO Data Hub, featuring population and GDP of Canada.
+            </p>
+        </div>
+        <figure id="chart3"></figure>
+        <figure id="chart4"><figure>
+    </section>  
 
     <section>
         <div class="chart-description">
             <h2>UK Chocolate prices</h2>
             <p>UK CPI index for chocolate over time.</p>
         </div>
-        <figure id="chart3"></figure>
+        <figure id="chart5"></figure>
     </section>
 
     <!-- Do you want to add more sections? -->
@@ -90,16 +100,15 @@
 
         let figure_1_spec = "wk1_chart1.json"; // We're storing the URL of the graph we want to display in a variable
         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-
         vegaEmbed('#chart1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-
         let figure_2_spec = "wk1_chart2.json";
-
         vegaEmbed('#chart2', figure_2_spec)
-
-        let figure_3_spec = "ukchocolate.json"
-            
-        vegaEmbed('#chart3', figure_3_spec);
+        let figure_3_spec = "wk2_chart1.json";
+        vegaEmbed('#chart3', figure_3_spec)
+        let figure_4_spec = "wk2_chart2.json";
+        vegaEmbed('#chart4', figure_4_spec)
+        let figure_5_spec = "ukchocolate.json"  
+        vegaEmbed('#chart5', figure_3_spec);
 
 
         // Do you want to add more graphs?
