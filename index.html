@@ -66,20 +66,17 @@
         </div>
 
         <!-- This element will contain our vega-lite chart -->
-        <figure id="chart1"></figure><!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="chart1"></figure>
         <figure id="chart2"></figure>
+    </section>                                      
 
     <section>
-    <div class="chart-description">
-        <h2>Section 3: A basic chart</h2>
-        <p>
-            We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-            As a first example, we're using a basic chart from our repo.
-        </p>
-    </div>
-
-    <figure id="chart3"></figure>
-</section>
+        <div class="chart-description">
+            <h2>UK Chocolate prices</h2>
+            <p>UK CPI index for chocolate over time.</p>
+        </div>
+        <figure id="chart3"></figure>
+    </section>
 
             {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
@@ -114,7 +111,7 @@
         let figure_1_spec = "wk1_chart1.json"; // We're storing the URL of the graph we want to display in a variable
         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
 
-        vegaEmbed('#chart', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+        vegaEmbed('#chart1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
         let figure_2_spec = "wk1_chart2.json";
 
