@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "GDP of Canada (1960-2026)",
+    "anchor": "start",
+    "subtitle": "2015 USD | Source: World Bank through ECO API",
+    "fontSize": "14",
+    "subtitleFontSize": "12",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "height": "250",
+  "width": "container",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "#ffffff",
+  "view": {
+    "fill": "#ffffff",
+    "strokeOpacity": 0
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/cod/gdpa?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#3a9dc8",
+    "strokeWidth": "2"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "Year",
+        "titleColor": "#122B39",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "USD",
+        "titleColor": "#122B39",
+        "grid": false
+      }
+    }
+  }
+}
